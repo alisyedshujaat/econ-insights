@@ -1,3 +1,14 @@
 remote_theme: pages-themes/minimal
 title: My Economics Blog
 description: Short articles, reviews, and insights.
+google_analytics: 
+show_downloads: false
+
+# Navigation Links
+nav_links:
+  - title: Home
+    url: /
+  - title: Portfolio
+    url: https://alisyedshujaat34.github.io/  # Update this to your exact portfolio URL
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/your-profile/ # Update this link
