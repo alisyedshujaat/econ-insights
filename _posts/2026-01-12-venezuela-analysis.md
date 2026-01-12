@@ -3,6 +3,7 @@ layout: post
 title: "Venezuela and the United States: An Economic and Geopolitical Turning Point (2026)"
 author: "Syed Shujaat Ali"
 date: 2026-01-12
+categories: [Geopolitics, Energy Economics, Latin America]
 ---
 
 Long dominated by the economics of oil, geopolitical rivalry, and domestic political instability, the relationship between Venezuela and the United States took one of its most dramatic escalations at the beginning of 2026, with major political, economic, and humanitarian consequences not only for both countries but also for the entire Western Hemisphere. According to reports available, the U.S. involvement in Venezuela has rapidly escalated and tilted a long standoff into a direct, unprecedented confrontation.
