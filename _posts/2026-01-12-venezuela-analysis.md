@@ -5,7 +5,9 @@ author: "Syed Shujaat Ali"
 date: 2026-01-12
 categories: [Geopolitics, Energy Economics, Latin America]
 ---
-
+<p style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+  By {{ page.author }} | {{ page.date | date: "%B %d, %Y" }}
+</p>
 Long dominated by the economics of oil, geopolitical rivalry, and domestic political instability, the relationship between Venezuela and the United States took one of its most dramatic escalations at the beginning of 2026, with major political, economic, and humanitarian consequences not only for both countries but also for the entire Western Hemisphere. According to reports available, the U.S. involvement in Venezuela has rapidly escalated and tilted a long standoff into a direct, unprecedented confrontation.
 
 US military forces conducted a high-profile operation inside Venezuela on January 3, 2026, where the outcome was the capture of President Nicolás Maduro and his wife. The US government announced that Maduro would be transferred to New York to face long-standing criminal indictments related to drug trafficking and weapons charges. In actuality, this operation did not occur in a vacuum; it rather materialized after months of increasing pressure that included strikes at sea, greater naval deployments, stricter financial sanctions, and a partial oil blockade designed to choke off the source of most of Venezuela's revenues. The Trump administration publicly declared that the United States now held short-term operational influence over Venezuela and signaled that further action was possible if cooperation was not forthcoming.
