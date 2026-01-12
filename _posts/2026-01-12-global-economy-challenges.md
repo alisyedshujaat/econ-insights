@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "The Global Economy in 2026: Challenges Ahead and How We Can Prepare"
-author: "Syed Shujaat Ali"
-date: 2026-01-12
 categories: [Macroeconomics, Global Trends, Economic Outlook]
 ---
 <p style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding-bottom: 10px;">
