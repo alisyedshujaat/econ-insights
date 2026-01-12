@@ -2,6 +2,23 @@
 layout: home
 title: Economic Insights
 ---
+<style>
+  @media screen and (min-width: 64em) {
+    .wrapper {
+      max-width: 1000px; /* This increases the total width from the default 640px */
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section {
+      width: 70%; /* Gives the article more horizontal room */
+      float: right;
+    }
+    header {
+      width: 25%; /* Pushes the sidebar further left */
+      float: left;
+    }
+  }
+</style>
 
 <header style="padding-bottom: 20px; border-bottom: 1px solid #eaecef; margin-bottom: 30px;">
   <h1 style="font-size: 2.5em; margin-bottom: 10px; color: #24292e;">Welcome to My Economics Platform</h1>
