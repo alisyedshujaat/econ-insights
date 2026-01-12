@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Venezuela and the United States: An Economic and Geopolitical Turning Point (2026)"
-author: "Syed Shujaat Ali"
-date: 2026-01-12
 categories: [Geopolitics, Energy Economics, Latin America]
 ---
 <p style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding-bottom: 10px;">
