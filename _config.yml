@@ -1,4 +1,4 @@
-remote_theme: pages-themes/cayman
+remote_theme: mmistakes/minimal-mistakes
 title: My Economics Blog
 description: Short articles, reviews, and insights.
 google_analytics: 
