@@ -2,26 +2,9 @@
 layout: home
 title: Economic Insights
 ---
-<style>
-  @media screen and (min-width: 64em) {
-    .wrapper {
-      max-width: 1000px; /* This increases the total width from the default 640px */
-      margin-left: auto;
-      margin-right: auto;
-    }
-    section {
-      width: 70%; /* Gives the article more horizontal room */
-      float: right;
-    }
-    header {
-      width: 25%; /* Pushes the sidebar further left */
-      float: left;
-    }
-  }
-</style>
 
 <header style="padding-bottom: 20px; border-bottom: 1px solid #eaecef; margin-bottom: 30px;">
-  <h1 style="font-size: 2.5em; margin-bottom: 10px; color: #24292e;">Welcome to My Economics Platform</h1>
+  <h1 style="font-size: 2.5em; margin-bottom: 10px; color: #24292e;">Economic Insights</h1>
   <p style="font-size: 1.1em; line-height: 1.6; color: #586069;">
     I am <strong>Syed Shujaat Ali</strong>. This platform is dedicated to exploring the intersection of global economics, geopolitics, and market analysis. Through short articles and reviews, I aim to break down complex economic shifts and their real-world consequences.
   </p>
