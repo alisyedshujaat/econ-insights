@@ -1,13 +1,25 @@
 remote_theme: pages-themes/minimal
 title: My Economics Blog
 description: Short articles, reviews, and insights.
+google_analytics: 
 show_downloads: false
+
+# Custom CSS to move sidebar left and widen the article space
+# This makes your research look like a professional white paper
+header_text: |
+  <style>
+    @media screen and (min-width: 64em) {
+      .wrapper { max-width: 1040px; margin: 0 auto; }
+      header { width: 200px; float: left; position: fixed; }
+      section { width: 750px; float: right; padding-left: 40px; }
+    }
+  </style>
 
 # Navigation Links
 nav_links:
   - title: Home
     url: /
   - title: Portfolio
-    url: https://alisyedshujaat34.github.io/  # Update this to your exact portfolio URL
+    url: https://alisyedshujaat.github.io/
   - title: LinkedIn
-    url: https://www.linkedin.com/in/your-profile/ # Update this link
+    url: https://www.linkedin.com/in/your-profile/
