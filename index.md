@@ -15,7 +15,7 @@ I am **Syed Shujaat Ali**. This platform is dedicated to exploring the intersect
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <p style="font-size: 0.8em; color: gray;">Published on {{ post.date | date: "%B %d, %2026" }}</p>
+      <p style="font-size: 0.8em; color: gray;">Published on {{ post.date | date: "%B %d, %Y"" }}</p>
     </li>
   {% endfor %}
 </ul>
