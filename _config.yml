@@ -1,14 +1,16 @@
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "air" # Try "contrast" or "mint" for different colors
+locale: "en-US"
 title: My Economics Blog
 description: Short articles, reviews, and insights.
-google_analytics: 
 show_downloads: false
 
-# Navigation Links
-nav_links:
-  - title: Home
-    url: /
-  - title: Portfolio
-    url: https://alisyedshujaat.github.io/
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/your-profile///www.linkedin.com/in/your-profile/
+# Minimal Mistakes uses 'nav' instead of 'nav_links'
+header:
+  nav_links:
+    - title: "Home"
+      url: /
+    - title: "Portfolio"
+      url: "https://alisyedshujaat.github.io/"
+    - title: "LinkedIn"
+      url: "https://www.linkedin.com/in/your-profile/"
