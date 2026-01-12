@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "The Global Economy in 2026: Challenges Ahead and How We Can Prepare"
+author: "SYED SHUJAAT ALI"
+date: 2026-01-12
 categories: [Macroeconomics, Global Trends, Economic Outlook]
 ---
-<p style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-  By {{ page.author }} | {{ page.date | date: "%B %d, %Y" }}
-</p>
 
 The global economy in 2026 is weirdly placed. It's growing, but not as it should be, nor is it evenly distributed. Some countries, especially in Asia, are bouncing back strongly from the pandemic. Others, such as those in large parts of Latin America, Africa, and Europe, remain burdened by debt, inflation, and sluggish growth. In general, the world is resilient yet fragile, with real challenges ahead.
 
