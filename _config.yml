@@ -4,14 +4,24 @@ description: Short articles, reviews, and insights.
 google_analytics: 
 show_downloads: false
 
-# Custom CSS to move sidebar left and widen the article space
-# This makes your research look like a professional white paper
+# Custom CSS to move sidebar left, widen space, and add dynamic hover effects
 header_text: |
   <style>
     @media screen and (min-width: 64em) {
       .wrapper { max-width: 1040px; margin: 0 auto; }
       header { width: 200px; float: left; position: fixed; }
       section { width: 750px; float: right; padding-left: 40px; }
+    }
+    /* Dynamic Hover Effect for Article Cards */
+    .article-card {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .article-card:hover {
+      border-color: #0366d6 !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+      background-color: #fcfcfc !important;
     }
   </style>
 
