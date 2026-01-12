@@ -43,5 +43,3 @@ Although individuals cannot control what goes on in a government, there are stil
 In 2026, the world's economy is neither booming nor imploding-it's fragile and unpredictable. Growth is moderate, inflation while improving remains a concern, and risks such as debt, automation, and climate are all real.
 
 Yet, these challenges are not insurmountable. With smart policies, investments in technology and skills, and foresight, governments, businesses, and individuals can mitigate risks and grab the opportunities. What is important is to be prepared to adapt. In that case, the right strategies will enable the global economy to sail through 2026 without further damage.
-
-**Author:** Syed Shujaat Ali
