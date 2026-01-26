@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stablecoins as a Bridge: Could 2026 Be the Year Tokenized Deposits Fix Cross-Border Remittances?"
-author: "Syed Shujaat Ali"
+author: "SYED SHUJAAT ALI"
 date: 2026-01-26
 categories: [Stablecoins, Tokenized Deposits, Remittances, Emerging Markets, Payments]
 ---
