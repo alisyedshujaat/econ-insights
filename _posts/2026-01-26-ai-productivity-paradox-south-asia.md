@@ -5,9 +5,6 @@ author: "SYED SHUJAAT ALI"
 date: 2026-01-26
 categories: ["AI", "Productivity", "South Asia", "Development Economics", "Technology"]
 ---
-
-# The AI Productivity Paradox in South Asia
-
 In recent years, artificial intelligence (AI) has been marketed as a general-purpose technology that will transform productivity across the global economy. From automating back-office work to optimizing logistics, improving healthcare diagnostics, and personalizing education, AI promises efficiency gains that rival those of electricity or the internet.
 
 Yet across much of South Asia, a paradox is emerging. AI adoption is rising—startups are building AI products, governments are launching digital strategies, and firms are experimenting with automation—but measurable productivity growth remains weak. This disconnect between rapid technological diffusion and stagnant productivity echoes what economists once called the “productivity paradox” of computers in the 1980s and 1990s. Today, South Asia may be experiencing its own version: the AI productivity paradox.
