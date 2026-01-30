@@ -7,9 +7,6 @@ categories: Global Economy Geopolitics
 tags: [World Order, Globalization, Geopolitics, Economic Policy, International Trade]
 description: "An analysis of how shifting power balances, technological rivalry, and economic fragmentation are reshaping the global order."
 ---
-
-# The Changing World Order: Economics, Power, and the Age of Strategic Competition
-
 For nearly three decades after the Cold War, the global system appeared unusually stable. Trade expanded rapidly, capital moved with fewer restrictions, and supply chains stretched across continents in pursuit of efficiency. Many policymakers and economists believed the world was converging toward a shared model built on open markets, institutional cooperation, and deep economic integration.
 
 That confidence is now fading.
