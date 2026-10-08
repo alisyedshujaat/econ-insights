@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign desc = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+  <title>{% if page.url == "/" or page.title == nil %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ desc | escape }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ desc | escape }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- LaTeX support: write $inline$ or $$display$$ math in your posts -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="{% if page.collection == 'posts' %}is-post{% else %}is-home{% endif %}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% if page.collection == "posts" %}<div class="progress" id="progress" aria-hidden="true"></div>{% endif %}
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+          <rect width="26" height="26" rx="6" fill="currentColor"/>
+          <path d="M5 18 L10 12 L14 15 L21 7" fill="none" stroke="var(--paper)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>{{ site.title }}</span>
+      </a>
+      <nav aria-label="Main">
+        {% for link in site.nav_links %}
+          {% if link.url contains "://" %}
+            <a href="{{ link.url }}" rel="noopener">{{ link.title }}</a>
+          {% else %}
+            <a href="{{ link.url | relative_url }}"{% if link.url == page.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+  {% if page.collection == "posts" %}
+    {% assign words = content | number_of_words %}
+    {% assign mins = words | divided_by: 220 | plus: 1 %}
+
+    <div class="wrap">
+      <header class="post-head">
+        <a class="back" href="{{ '/' | relative_url }}#articles">All articles</a>
+        <h1>{{ page.title }}</h1>
+        <p class="post-meta">
+          By {{ site.author }}<span class="sep"></span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time><span class="sep"></span>
+          {{ mins }} min read
+        </p>
+      </header>
+
+      <div class="post-layout">
+        <aside class="toc" id="toc" aria-label="In this article" hidden>
+          <h2>In this article</h2>
+          <ol id="toc-list"></ol>
+        </aside>
+
+        <article class="prose" id="prose">
+          {{ content }}
+
+          <div class="cite">
+            <strong>How to cite</strong>
+            <p>Ali, Syed Shujaat. ({{ page.date | date: "%Y" }}). <em>{{ page.title }}</em>. Economic Analysis &amp; Global Insights. {{ page.url | absolute_url }}</p>
+          </div>
+
+          <nav class="pager" aria-label="More articles">
+            {% if page.next %}
+              <a class="pager-link" href="{{ page.next.url | relative_url }}">
+                <span>Older article</span>
+                <strong>{{ page.next.title }}</strong>
+              </a>
+            {% else %}<span></span>{% endif %}
+            {% if page.previous %}
+              <a class="pager-link right" href="{{ page.previous.url | relative_url }}">
+                <span>Newer article</span>
+                <strong>{{ page.previous.title }}</strong>
+              </a>
+            {% endif %}
+          </nav>
+        </article>
+      </div>
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. Released under the MIT License.</p>
+      <p>
+        <a href="https://github.com/alisyedshujaat/econ-insights" rel="noopener">Source on GitHub</a>
+        <span class="sep"></span>
+        <a href="mailto:{{ site.email }}">Email</a>
+      </p>
+    </div>
+  </footer>
+
+  {% if page.collection == "posts" %}
+  <script>
+    (function () {
+      var prose = document.getElementById('prose');
+      var bar = document.getElementById('progress');
+
+      // Reading progress
+      function onScroll() {
+        var rect = prose.getBoundingClientRect();
+        var total = rect.height - window.innerHeight * 0.6;
+        var done = Math.min(Math.max(-rect.top + 80, 0), total);
+        bar.style.width = (total > 0 ? (done / total) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Table of contents from h2 headings
+      var heads = prose.querySelectorAll('h2');
+      if (heads.length < 2) return;
+      var list = document.getElementById('toc-list');
+      var links = [];
+      heads.forEach(function (h, i) {
+        if (!h.id) h.id = 'section-' + (i + 1);
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        list.appendChild(li);
+        links.push({ el: h, a: a });
+      });
+      document.getElementById('toc').hidden = false;
+
+      // Highlight the section being read
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              links.forEach(function (l) { l.a.classList.toggle('active', l.el === e.target); });
+            }
+          });
+        }, { rootMargin: '-80px 0px -70% 0px' });
+        links.forEach(function (l) { io.observe(l.el); });
+      }
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>

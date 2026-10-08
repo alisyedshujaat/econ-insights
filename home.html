@@ -1,0 +1,120 @@
+---
+layout: default
+---
+{% assign latest = site.posts.first %}
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Economics, explained through trade, power and policy.</h1>
+      <p class="lede">
+        Short, data-led articles on the global economy, geopolitics and the technologies reshaping both.
+        Written by <strong>{{ site.author }}</strong>.
+      </p>
+      <div class="actions">
+        {% if latest %}<a class="btn primary" href="{{ latest.url | relative_url }}">Read the latest article</a>{% endif %}
+        <a class="btn" href="#articles">Browse all articles</a>
+      </div>
+    </div>
+
+    <figure class="chart" aria-hidden="true">
+      <svg viewBox="0 0 600 340" role="img">
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="20" y1="40"  x2="500" y2="40"/>
+          <line x1="20" y1="110" x2="500" y2="110"/>
+          <line x1="20" y1="180" x2="500" y2="180"/>
+          <line x1="20" y1="250" x2="500" y2="250"/>
+        </g>
+        <line x1="20" y1="320" x2="500" y2="320" stroke="var(--muted)" stroke-width="1.5"/>
+
+        <path class="ln l1" pathLength="1" d="M20 262 C80 240 120 205 170 212 S250 150 300 120 S400 90 500 42" stroke="var(--c-trends)"/>
+        <path class="ln l2" pathLength="1" d="M20 160 C70 118 110 192 160 172 S230 78 280 132 S360 224 420 172 S480 122 500 134" stroke="var(--c-geo)"/>
+        <path class="ln l3" pathLength="1" d="M20 304 C90 294 140 272 200 252 S300 232 360 192 S450 172 500 152" stroke="var(--c-res)"/>
+
+        <g font-family="var(--sans)" font-size="14" font-weight="500">
+          <text x="512" y="47"  fill="var(--c-trends)">Global trends</text>
+          <text x="512" y="139" fill="var(--c-geo)">Geopolitics</text>
+          <text x="512" y="157" fill="var(--c-res)">Resilience</text>
+        </g>
+      </svg>
+      <figcaption>Illustrative graphic, not data.</figcaption>
+    </figure>
+  </div>
+</section>
+
+{% if latest %}
+<section class="section">
+  <div class="wrap">
+    <h2 class="section-title">Latest article</h2>
+    {% assign lw = latest.content | number_of_words %}
+    {% assign lm = lw | divided_by: 220 | plus: 1 %}
+    <a class="latest-card" href="{{ latest.url | relative_url }}">
+      <p class="meta">{{ latest.date | date: "%B %-d, %Y" }}<span class="sep"></span>{{ lm }} min read</p>
+      <h3>{{ latest.title }}</h3>
+      <p class="excerpt">{{ latest.excerpt | strip_html | strip_newlines | truncatewords: 40 }}</p>
+      <span class="read">Read the article</span>
+    </a>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="articles">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">All articles</h2>
+      <p class="count">{{ site.posts | size }} published</p>
+    </div>
+    <div class="entries">
+      {% for post in site.posts offset: 1 %}
+        {% assign pw = post.content | number_of_words %}
+        {% assign pm = pw | divided_by: 220 | plus: 1 %}
+        <a class="entry" href="{{ post.url | relative_url }}">
+          <p class="meta">{{ post.date | date: "%B %-d, %Y" }}<span class="sep"></span>{{ pm }} min read</p>
+          <h3>{{ post.title }}</h3>
+          <p class="excerpt">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 26 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section pillars">
+  <div class="wrap">
+    <h2 class="section-title">What I write about</h2>
+    <div class="pillar-grid">
+      <div class="pillar trends">
+        <h3>Global trends</h3>
+        <p>Examining the forces shaping GDP growth, inflation, and trade stability.</p>
+      </div>
+      <div class="pillar geo">
+        <h3>Geopolitical economy</h3>
+        <p>Evaluating how international relations and policy decisions drive market outcomes.</p>
+      </div>
+      <div class="pillar res">
+        <h3>Future resilience</h3>
+        <p>Exploring the impact of emerging technologies, energy transitions, and social shifts on long-term prosperity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="section-title">About the project</h2>
+      <p>
+        This is a space for transparent, data-driven economic analysis. Built openly on GitHub,
+        it offers objective reviews and articles that demystify the shifts in our global and local economies.
+      </p>
+      <p>
+        Every article is version-controlled, so you can see how an argument changed over time.
+      </p>
+    </div>
+    <div class="contact">
+      <h3>Get in touch</h3>
+      <p>Open to discussing economic trends, data analysis and research collaborations.</p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a href="https://github.com/alisyedshujaat" rel="noopener">github.com/alisyedshujaat</a></p>
+    </div>
+  </div>
+</section>
