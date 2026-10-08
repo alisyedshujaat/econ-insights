@@ -1,28 +1,27 @@
-remote_theme: pages-themes/minimal
+# Site settings (the "minimal" remote theme is removed; the site now uses its own layouts and CSS)
+title: Economic Insights
+description: Short, data-led articles on the global economy, geopolitics and the technologies reshaping both.
+author: Syed Shujaat Ali
+email: alisyedshujaat34@gmail.com
 
-title: My Economics Blog
+url: https://alisyedshujaat.github.io
+baseurl: /econ-insights
 
-description: Short articles, reviews, and insights.
+markdown: kramdown
 
-google_analytics: 
-
-show_downloads: false
-layout: default
-
-
-
-# Navigation Links
-
+# Navigation links (shown in the top bar)
 nav_links:
-
   - title: Home
-
     url: /
-
   - title: Portfolio
-
     url: https://alisyedshujaat.github.io/
-
   - title: LinkedIn
+    url: https://www.linkedin.com/in/your-profile/   # replace with your real LinkedIn URL
 
-    url: https://www.linkedin.com/in/your-profile///www.linkedin.com/in/your-profile/
+# Make every post use the post layout unless it sets its own
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
