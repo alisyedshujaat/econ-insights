@@ -45,7 +45,7 @@ body {
 a { color: var(--accent); }
 img, svg { max-width: 100%; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
 .sep::before { content: ""; display: inline-block; width: 4px; height: 4px; margin: 0 10px; border-radius: 50%; background: currentColor; opacity: .5; vertical-align: middle; }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 8px 14px; border-radius: 6px; z-index: 100; }
 .skip:focus { left: 8px; }
@@ -208,3 +208,21 @@ img, svg { max-width: 100%; }
   .site-header nav { gap: 16px; }
   .brand span { font-size: 1.1rem; }
 }
+
+/* ---------- Article alignment ---------- */
+
+/* Justified body text, with hyphenation so word gaps stay even */
+.prose p, .prose li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+/* Line the title and byline up with the article column */
+.post-head { max-width: 966px; padding-left: 266px; }
+.wrap:has(.toc[hidden]) .post-head { max-width: 700px; padding-left: 0; }
+@media (max-width: 960px) { .post-head { max-width: 700px; padding-left: 0; } }
+
+/* Narrow phone screens: justified text looks gappy, so go back to left-aligned */
+@media (max-width: 720px) {
+  .prose p, .prose li { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+}
+
+/* Hide the extra divider line where a post's own "---" sits right above a heading */
+.prose hr:has(+ h2) { display: none; }
