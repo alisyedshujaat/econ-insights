@@ -16,8 +16,8 @@ nav_links:
   - title: Portfolio
     url: https://alisyedshujaat.github.io/
   - title: LinkedIn
-    url: https://www.linkedin.com/in/your-profile/   # replace with your real LinkedIn URL
-
+    url: https://www.linkedin.com/in/syed-shujaat-ali-02a147193/
+    
 # Make every post use the post layout unless it sets its own
 defaults:
   - scope:
